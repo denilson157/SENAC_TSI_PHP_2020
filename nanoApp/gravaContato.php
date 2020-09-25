@@ -2,6 +2,10 @@
 
 require_once './db.php';
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $statement = $banco->prepare("INSERT INTO contatos (nome,celular) 
                                 VALUES (:nome,:tel)");
 
@@ -14,5 +18,4 @@ if ($statement->execute())
 else
     $msg = "Erro ao cadastrar :(";
 
-
-include 'gravaContatoTpl.php';
+include "listaContato.php";
