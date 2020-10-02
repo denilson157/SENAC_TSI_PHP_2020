@@ -3,16 +3,18 @@
 require_once "db.php";
 
 if (isset($_POST['id'])) {
+
     $idAtualizar = preg_replace('/\D/', '', $_POST['id']);
+    $nome = $_POST['nome'];
+    $cel = $_POST['celular'];
 
-    $statement = $banco->prepare("UPDATE contatos (nome,celular) 
-                                    SET nome = :nome, 
-                                    celular = :celular
-                                    WHERE id = $idAtualizar
-                                ");
+    $sql = 'UPDATE contatos SET nome = :nome, celular = :celular WHERE id = :id ';
 
-    $statement->bindParam(':nome', $_POST['nome']);
-    $statement->bindParam(':tel', $_POST['celular']);
+    $statement = $banco->prepare($sql);
+
+    $statement->bindParam(':id', $idAtualizar);
+    $statement->bindParam(':nome', $nome);
+    $statement->bindParam(':celular', $cel);
 
     if ($statement->execute()) {
         $msg = "Contato Editado com sucesso";

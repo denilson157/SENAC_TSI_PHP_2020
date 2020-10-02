@@ -8,8 +8,11 @@
 
 <body>
     <center>
-        <a href="./index.html">Cadastrar novo contato</a>
-        <a href="./buscaContato.html">Buscar por Nome</a>
+        <h2>Contatos encontrados</h2>
+
+        <a href="./listaContato.php">Voltar para Lista</a>
+        <a href="./buscaContato.html">Buscar novamente</a>
+        <br><br>
         <table border="border" style="width: 35%;">
             <thead>
                 <tr>
@@ -22,27 +25,20 @@
                     <th>
                         Celular
                     </th>
-                    <th>
-                        Ações
-                    </th>
                 </tr>
             </thead>
             <tbody>
-                <?php if (count($tabelas) > 0) foreach ($tabelas as $tabela) : ?>
+                <?php if (count($contatos) > 0) foreach ($contatos as $contato) : ?>
 
                     <tr style="text-align:center;">
                         <td>
-                            <?= $tabela['id'] ?>
+                            <?= $contato['id'] ?>
                         </td>
                         <td>
-                            <?= $tabela['nome'] ?>
+                            <?= $contato['nome'] ?>
                         </td>
                         <td>
-                            <?= $tabela['cel'] ?>
-                        </td>
-                        <td>
-                            <a href="apagaContato.php?id=<?= $tabela['id'] ?>">Apagar</a>
-                            <a href="editaContato.php?id=<?= $tabela['id'] ?>">Editar</a>
+                            <?= $contato['cel'] ?>
                         </td>
                     </tr>
 
