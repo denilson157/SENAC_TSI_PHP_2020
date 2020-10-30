@@ -15,8 +15,6 @@ $db = new PDO($dsn, $user, $password);
 $sql = 'SELECT nome, telefone FROM cliente';
 
 $r = $db->query($sql);
-git config --global user.email "deene67@gmail.com"
-    git config --global user.name "denilson157"
 echo '<pre>';
 
 while ($reg = $r->fetch(PDO::FETCH_ASSOC)) {
