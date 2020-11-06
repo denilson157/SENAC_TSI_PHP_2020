@@ -1,6 +1,6 @@
 <?php
-
-include '../../model/db.php';
+chdir(__DIR__);
+include '../model/db.php';
 
 $nome = $_POST['name'] ?? null;
 $email = $_POST['email'] ?? null;
@@ -16,6 +16,7 @@ if (strlen($nome) < 2) {
     $errors[] = "O nome tem que ter ao menos 2 caracteres";
 }
 
+
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors[] = "Insira um e-mail válido";
 } else if (emailExist($email)) {
@@ -27,4 +28,4 @@ if (strlen($password) < 8)
 else if ($password != $passwordVerify)
     $errors[] = "A senhas precisam ser iguais";
 
-include './index_tpl.php';
+include '../view/register/index_tpl.php';

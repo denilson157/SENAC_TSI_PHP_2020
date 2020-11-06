@@ -22,16 +22,13 @@ include "./view/template/header.php";
         foreach ($lista as $usuario) :
         ?>
             <tr>
-                <td><?= $usuario['id']?></td>
-                <td><?= $usuario['nome']?></td>
-                <td><?= $usuario['email']?></td>
+                <td><?= $usuario['id'] ?></td>
+                <td><?= $usuario['nome'] ?></td>
+                <td><?= $usuario['email'] ?></td>
             </tr>
         <?php
         endforeach
         ?>
-        <tr>
-            <td></td>
-        </tr>
     </tbody>
 
 </table>

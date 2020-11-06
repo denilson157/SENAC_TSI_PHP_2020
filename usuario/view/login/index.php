@@ -5,7 +5,7 @@ require_once '../../model/config.php';
 session_start();
 
 if (isset($_SESSION['login']))
-	Header("Location: /SENAC_TSI_PHP_2020/usuario/view/list");
+	Header("Location: /SENAC_TSI_PHP_2020/usuario/");
 else
     if (!isset($_POST['entrar'])) {
 	Header("Location: index_tpl.php");
@@ -20,7 +20,7 @@ else
 
 	if (password_verify($senha, $hash)) {
 		$_SESSION['login'] = $login;
-		Header("Location: /SENAC_TSI_PHP_2020/usuario/view/list");
+		Header("Location: /SENAC_TSI_PHP_2020/usuario/");
 	} else {
 		$msg = "Credenciais inválidas, tente novamente";
 		Header("Location: /SENAC_TSI_PHP_2020/usuario/view/login/index_tpl.php");

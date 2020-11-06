@@ -1,4 +1,5 @@
 <?php
+chdir(__DIR__);
 
 $dsn = 'sqlsrv:Server=localhost\\SQLEXPRESS;Database=CMS';
 $user = 'sa';

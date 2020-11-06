@@ -19,7 +19,7 @@
                 </h2>
                 <h2 class="h3 w-100 text-danger">
                     <?php
-                    if (count($errors) > 0)
+                    if (isset($errors) && count($errors) > 0)
                         foreach ($errors as $errors) {
                             echo $erro . "<br>";
                         }

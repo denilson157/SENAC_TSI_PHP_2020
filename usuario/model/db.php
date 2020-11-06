@@ -1,6 +1,6 @@
 <?php
-
-require_once 'SENAC_TSI_PHP_2020/usuario/model/config.php';
+chdir(__DIR__);
+require_once './config.php';
 
 function listar(): array
 {
@@ -28,7 +28,6 @@ function emailExist($email): bool
     $statement->execute();
 
     $reg = $statement->fetch();
-
 
     return is_numeric($reg['id']) ? true : false;
 }
