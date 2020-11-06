@@ -36,6 +36,11 @@
                             <input type="password" id="password" class="form-control" required name="password" />
                         </div>
                     </div>
+                    <div class="row mx-auto my-4">
+                        <span class="mx-auto"> Não é Cadastrado?
+                            <a href="/SENAC_TSI_PHP_2020/usuario/view/register/index_tpl.php">Crie sua conta</a>
+                        </span>
+                    </div>
                     <div class="row my-4">
                         <div class="mx-auto">
                             <button class="btn btn-primary" type="submit" name="entrar">
