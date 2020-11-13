@@ -15,7 +15,7 @@
         <section class="container-form d-flex flex-column align-items-center justify-content-center px-4">
             <div class="my-5 text-center">
                 <h2 class="h3 w-100 mx-auto">
-                    Crie sua conta
+                    Edite seu perfil
                 </h2>
                 <h2 class="h3 w-100 text-danger">
                     <?php
@@ -27,30 +27,22 @@
                 </h2>
             </div>
             <div>
-                <form class="form-group" method="post" action="./index.php">
+                <form class="form-group" method="post" action="/SENAC_TSI_PHP_2020/usuario/view/edit/">
                     <div class="row">
                         <div class="col-12">
                             <label for="name">Nome</label>
-                            <input type="text" id="name" class="form-control" required name="name" />
+                            <input type="text" id="name" class="form-control" required name="name" value=<?= $nome ?> />
                         </div>
                         <div class="col-12">
                             <label for="email">E-mail</label>
-                            <input type="email" id="email" class="form-control" required name="email" />
-                        </div>
-                        <div class="col-12">
-                            <label for="password">Senha</label>
-                            <input type="password" id="password" class="form-control" required name="password" />
-                        </div>
-                        <div class="col-12">
-                            <label for="passwordVerify">Confirme a senha</label>
-                            <input type="password" id="passwordVerify" class="form-control" required name="passwordVerify" />
+                            <input type="email" id="email" class="form-control" required name="email" value=<?= $email ?> />
                         </div>
                     </div>
 
                     <div class="row my-4">
                         <div class="mx-auto">
                             <button class="btn btn-primary" type="submit" name="cadastrar">
-                                Entrar
+                                Salvar
                             </button>
                         </div>
                     </div>

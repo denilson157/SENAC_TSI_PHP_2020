@@ -27,5 +27,3 @@ if (strlen($password) < 8)
     $errors[] = "A senha precisa ter ao menos 8 caracteres";
 else if ($password != $passwordVerify)
     $errors[] = "A senhas precisam ser iguais";
-
-include '../view/register/index_tpl.php';
